@@ -4,6 +4,29 @@ A MERN stack application that simulates real-time monitoring of network infrastr
 (routers, switches, servers, firewalls, access points). Devices are checked on a schedule,
 status changes are logged as alerts, and historical uptime is charted per device.
 
+## Live Demo
+
+- **Frontend:** https://network-device-monitoring-dashboard.vercel.app
+- **Backend Health Check:** https://network-device-monitoring-dashboard.onrender.com/api/health
+
+## Screenshots
+
+### Login
+
+![Login](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Devices
+
+![Devices](screenshots/devices.png)
+
+### Device History
+
+![Device History](screenshots/history.png)
+
 ## Stack
 
 - **MongoDB** (Atlas) — device, user, alert, and uptime-log storage
