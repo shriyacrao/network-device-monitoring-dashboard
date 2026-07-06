@@ -9,6 +9,10 @@ status changes are logged as alerts, and historical uptime is charted per device
 - **Frontend:** https://network-device-monitoring-dashboard.vercel.app
 - **Backend Health Check:** https://network-device-monitoring-dashboard.onrender.com/api/health
 
+## GitHub Repository
+
+https://github.com/shriyacrao/network-device-monitoring-dashboard
+
 ## Screenshots
 
 ### Login
@@ -74,6 +78,12 @@ network-monitor/
     └── history.png
 ```
 
+## Prerequisites
+
+- Node.js v18+
+- npm
+- MongoDB Atlas account (or local MongoDB)
+  
 ## Local Setup
 
 ### 1. Backend
@@ -124,4 +134,6 @@ By default the heartbeat job in `backend/jobs/heartbeat.js` runs every minute
 (`'* * * * *'`). For a live demo where you want visible changes faster, or slower to
 avoid overwhelming the alert feed, edit the cron expression in `startHeartbeatJob()`.
 
+## Notes
 
+This project simulates network infrastructure monitoring using scheduled heartbeat checks rather than communicating with real networking hardware. It is intended as a demonstration of full-stack development concepts including authentication, dashboards, background jobs, REST APIs, and data visualization.
