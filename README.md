@@ -59,14 +59,19 @@ network-monitor/
 │   ├── jobs/heartbeat.js
 │   ├── seed.js
 │   └── server.js
-└── frontend/
-    ├── src/
-    │   ├── api/api.js
-    │   ├── context/AuthContext.jsx
-    │   ├── components/
-    │   ├── pages/
-    │   └── App.jsx
-    └── index.html
+├── frontend/
+│   ├── src/
+│   │   ├── api/api.js
+│   │   ├── context/AuthContext.jsx
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   └── index.html
+└── screenshots/
+    ├── login.png
+    ├── dashboard.png
+    ├── devices.png
+    └── history.png
 ```
 
 ## Local Setup
@@ -98,7 +103,7 @@ npm run dev      # starts Vite dev server on http://localhost:5173
 
 Visit `http://localhost:5173` and log in with the seeded admin account.
 
-## Deployment (same pattern as your Help Desk project)
+## Deployment 
 
 1. **MongoDB Atlas** — create a free cluster, whitelist your deployment IPs (or `0.0.0.0/0`
    for simplicity while testing), and copy the connection string into `MONGO_URI`.
@@ -119,11 +124,4 @@ By default the heartbeat job in `backend/jobs/heartbeat.js` runs every minute
 (`'* * * * *'`). For a live demo where you want visible changes faster, or slower to
 avoid overwhelming the alert feed, edit the cron expression in `startHeartbeatJob()`.
 
-## Resume/portfolio notes
 
-This project is designed to demonstrate:
-- REST API design with role-based access control (JWT + middleware)
-- MongoDB schema design across related collections (devices, alerts, logs, users)
-- Background job scheduling (`node-cron`) — a pattern common in real infra monitoring tools
-- Data visualization (Recharts) driven by time-series data
-- Full deployment pipeline (MongoDB Atlas + Render + Vercel)
